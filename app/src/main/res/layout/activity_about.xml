@@ -9,8 +9,19 @@
 
     <TextView
         android:id="@+id/tvAbout"
+        android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="datos y más datos"/>
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:text="Desarrollador: Jesús García Díaz"/>
+
+    <TextView
+        android:id="@+id/tvInfo"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="El desarrollador es un ser humano, del género masculino, que desarrolló el desarrollo que ha desarrollado."/>
 
 </LinearLayout>
