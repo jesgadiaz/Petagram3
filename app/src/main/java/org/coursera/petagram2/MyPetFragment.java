@@ -38,15 +38,15 @@ public class MyPetFragment extends Fragment {
 
         // Hardcoded data
         myPet = new ArrayList<>();
-        myPet.add(new Pet(R.drawable.dog, "Matías", 0));
+        myPet.add(new Pet(R.drawable.dog, "Nisha", 0));
         myPet.add(new Pet(R.drawable.dog2, "Nisha", 0));
-        myPet.add(new Pet(R.drawable.dog, "Sebastián", 0));
-        myPet.add(new Pet(R.drawable.dog2, "Pirata", 0));
-        myPet.add(new Pet(R.drawable.dog, "Señora Gorda", 0));
-        myPet.add(new Pet(R.drawable.dog2, "Lola", 0));
-        myPet.add(new Pet(R.drawable.dog, "Rocky", 0));
-        myPet.add(new Pet(R.drawable.dog2, "Fifí", 0));
-        myPet.add(new Pet(R.drawable.dog, "Doby", 0));
+        myPet.add(new Pet(R.drawable.dog, "Nisha", 0));
+        myPet.add(new Pet(R.drawable.dog2, "Nisha", 0));
+        myPet.add(new Pet(R.drawable.dog, "Nisha", 0));
+        myPet.add(new Pet(R.drawable.dog2, "Nisha", 0));
+        myPet.add(new Pet(R.drawable.dog, "Nisha", 0));
+        myPet.add(new Pet(R.drawable.dog2, "Nisha", 0));
+        myPet.add(new Pet(R.drawable.dog, "Nisha", 0));
 
         // Adapter instantiation
         MyPetAdapter myPetAdapter = new MyPetAdapter(myPet);
