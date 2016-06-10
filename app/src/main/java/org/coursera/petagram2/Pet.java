@@ -5,14 +5,28 @@ package org.coursera.petagram2;
  */
 public class Pet {
 
+    private int id;
     private int foto;
     private String name;
     private int rate;
 
-    public Pet(int foto, String name, int rate){
+    public Pet(){
+
+    }
+
+    public Pet(int id,int foto, String name, int rate){
+        this.id = id;
         this.foto = foto;
         this.name = name;
         this.rate = rate;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getFoto() {

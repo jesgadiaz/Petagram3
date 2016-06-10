@@ -43,7 +43,7 @@ public class BestFive extends AppCompatActivity {
         pets = new ArrayList<>();
         Intent intent = getIntent();
         for (int i=0;i<5;i++){
-            pets.add(new Pet(intent.getIntExtra("foto" + i, 0), intent.getStringExtra("name" + i), intent.getIntExtra("rate" + i, 0)));
+            pets.add(new Pet(intent.getIntExtra("pet_id" + i, 0), intent.getIntExtra("foto" + i, 0), intent.getStringExtra("name" + i), intent.getIntExtra("rate" + i, 0)));
         }
 
         // Adapter instantiation
