@@ -43,7 +43,7 @@ public class DataBase extends SQLiteOpenHelper {
     public ArrayList<Pet> getAllData(){
         ArrayList<Pet> pets = new ArrayList<>();
 
-        String query = "SELECT * FROM" + DataBaseConstants.TABLE_NAME;
+        String query = "SELECT * FROM " + DataBaseConstants.TABLE_NAME;
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(query, null);
 
