@@ -1,5 +1,6 @@
 package org.coursera.petagram2;
 
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +17,12 @@ import java.util.ArrayList;
 public class PetAdapter extends RecyclerView.Adapter<PetAdapter.PetViewHolder>{
 
     ArrayList<Pet> pets;
+    PetsFragment fragment;
+
+    public PetAdapter(ArrayList<Pet> pets, PetsFragment fragment){
+        this.pets = pets;
+        this.fragment = fragment;
+    }
 
     public PetAdapter(ArrayList<Pet> pets){
         this.pets = pets;
@@ -39,6 +46,8 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.PetViewHolder>{
             public void onClick(View v) {
                 pets.get(position).setRate(pets.get(position).getRate() + 1);
                 notifyItemChanged(position);
+
+                fragment.onClickLikes(position);
             }
         });
     }

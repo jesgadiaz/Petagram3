@@ -59,4 +59,14 @@ public class DataBase extends SQLiteOpenHelper {
         db.close();
         return pets;
     }
+
+    public void incrementLikesPet(int id){
+        String query = "UPDATE " + DataBaseConstants.TABLE_NAME +
+                " SET " + DataBaseConstants.DB_PET_RATE + "=" + DataBaseConstants.DB_PET_RATE
+                + "+1 " +
+                "WHERE " + DataBaseConstants.DB_PET_ID + "=" + Integer.toString(id);
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL(query);
+        db.close();
+    }
 }

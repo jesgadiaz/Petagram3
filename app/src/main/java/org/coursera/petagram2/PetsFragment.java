@@ -63,7 +63,7 @@ public class PetsFragment extends Fragment {
 
 
         // Adapter instantiation
-        PetAdapter petAdapter = new PetAdapter(pets);
+        PetAdapter petAdapter = new PetAdapter(pets, PetsFragment.this);
         rvPets.setAdapter(petAdapter);
 
 
@@ -113,7 +113,7 @@ public class PetsFragment extends Fragment {
         Log.v("DATABASE Petagram", "is DB present Entry!!!");
         boolean checkFlag = true;
         SQLiteDatabase testDb;
-        String testPath = "/data/data/org.coursera.petagram2/" + DataBaseConstants.DB_PET_NAME;
+        String testPath = "/data/data/org.coursera.petagram2/databases/" + DataBaseConstants.DATABASE_NAME;
         try{
             testDb = SQLiteDatabase.openDatabase(testPath, null,
                     SQLiteDatabase.OPEN_READWRITE);
@@ -204,4 +204,10 @@ public class PetsFragment extends Fragment {
         pets.add(new Pet(7, R.drawable.dog2, "Fifí", 0));
         pets.add(new Pet(8, R.drawable.dog, "Doby", 0));
     }
+
+    public void onClickLikes(int id){
+        DataBase db = new DataBase(this.getContext());
+        db.incrementLikesPet(id);
+    }
+
 }
