@@ -37,7 +37,8 @@ public class DataBase extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        db.execSQL("DROP TABLE IF EXIST " + DataBaseConstants.TABLE_NAME);
+        onCreate(db);
     }
 
     public ArrayList<Pet> getAllData(){
