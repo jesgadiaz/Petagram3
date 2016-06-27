@@ -27,4 +27,11 @@
         android:visible="true">
     </item>
 
+    <item
+        android:id="@+id/mUserSettings"
+        android:title="@string/user_settings"
+        android:orderInCategory="103"
+        android:visible="true">
+    </item>
+
 </menu>

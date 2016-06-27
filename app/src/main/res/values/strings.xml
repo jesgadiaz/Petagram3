@@ -3,4 +3,5 @@
     <string name="about">Acerca de</string>
     <string name="contact">Contacto</string>
     <string name="settings">Configuración</string>
+    <string name="user_settings">Configurar contacto</string>
 </resources>

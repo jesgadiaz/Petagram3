@@ -1,6 +1,8 @@
 package org.coursera.petagram2;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -35,6 +37,11 @@ public class MyPetFragment extends Fragment {
 
         // Set Layout Manager
         rvMyPet.setLayoutManager(sglm);
+
+
+        // Get Instagram User
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this.getActivity());
+        String instagramUser = prefs.getString("InstagramUser", "jesgadiaz");
 
         // Hardcoded data
         myPet = new ArrayList<>();

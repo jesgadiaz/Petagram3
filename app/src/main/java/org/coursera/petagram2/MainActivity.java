@@ -72,6 +72,10 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent2 = new Intent(this, AboutActivity.class);
                 startActivity(intent2);
                 break;
+            case R.id.mUserSettings:
+                Intent intent3 = new Intent(this, SetInstagramUserActivity.class);
+                startActivity(intent3);
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
